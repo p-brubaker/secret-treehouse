@@ -20,7 +20,9 @@ export default function App() {
               <Login />
             </Route>
             <Route path="/treehouse/members">
-              <TreehouseMembers />
+              <PrivateRoute>
+                <TreehouseMembers />
+              </PrivateRoute>
             </Route>
             <PrivateRoute path="/treehouse">
               <Treehouse />
